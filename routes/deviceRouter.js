@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     getAll(req, res);
 });
 router.get('/:id', (req, res) => {
-    getOne(req. res);
+    getOne(req, res);
 });
 
 
