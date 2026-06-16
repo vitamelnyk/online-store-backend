@@ -47,8 +47,10 @@ export async function login(req, res, next) {
     }
 
     const token = generateJwt(user.id, user.email, user.role);
-    return res.json({token});
+    return res.json({ token });
 }
 
 export async function check(req, res, next) {
+    const token = generateJwt(req.user.id, req.user.email, req.user.role);
+    return res.json({ token });
 }
